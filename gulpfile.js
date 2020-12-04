@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
  
 exports.default = () => (
-    gulp.src('src/2020/08/*')
+    gulp.src('src/**/*')
         .pipe(imagemin({
         	verbose: true,
 		    interlaced: true,
@@ -14,5 +14,5 @@ exports.default = () => (
 		        }
 		    ]
 		}))
-        .pipe(gulp.dest('dist/2020/08/'))
+        .pipe(gulp.dest('dist/'))
 );
